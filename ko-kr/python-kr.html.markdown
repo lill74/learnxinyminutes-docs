@@ -35,19 +35,19 @@ Python은 귀도 반 로섬이 90년대에 만들었습니다. Python은 현존�
 # 숫자
 3  # => 3
 
-# 수학 연산은 예상한대로 임
+# 수학 연산은 예상하신 대로입니다.
 1 + 1   # => 2
 8 - 1   # => 7
 10 * 2  # => 20
 35 / 5  # => 7.0
 
-#  양수와 음수 둘다 반올림하는 정수의 나눗셈
+#  몫에 반올림을 한 나눗셈입니다.
 5 // 3       # => 1
 -5 // 3      # => -2
 5.0 // 3.0   # => 1.0 # works on floats too
 -5.0 // 3.0  # => -2.0
 
-# 나누기의 결과는 항상 float
+# 나누기의 결과는 항상 float 입니다
 10.0 / 3  # => 3.3333333333333335
 
 # 나머지 연산
@@ -56,60 +56,60 @@ Python은 귀도 반 로섬이 90년대에 만들었습니다. Python은 현존�
 # 거듭제곱 (x**y, x 의 y거듭 제곱)
 2**3  # => 8
 
-# 괄호를 이용해 연산자 우선순위 지정
+# 괄호를 이용해 연산자 우선순위를 지정합니다.
 1 + 3 * 2  # => 7
 (1 + 3) * 2  # => 8
 
-# Boolean은 그대로 (대문자 주의)
+# 불린(Boolean) 값은 기본형입니다. (대 소문자를 주의해야 합니다)
 True  # => 참
 False  # => 거짓
 
-# not을 이용해 부정
+# not을 이용해 부정합니다.
 not True   # => 거짓
 not False  # => 참
 
 # Boolean 연산
-# "and" 와 "or" 은 대 소문자를 구별해야함
+# "and" 와 "or" 은 대 소문자를 구별해야합니다
 True and False  # => False
 False or True   # => True
 
-# True and False are actually 1 and 0 but with different keywords
+# True 와 False 는 이름만 다를뿐 사실 각각 1과 0입니다
 True + True # => 2
 True * 8    # => 8
 False - 5   # => -5
 
-# Comparison operators look at the numerical value of True and False
+# 
 0 == False  # => True
 1 == True   # => True
 2 == True   # => False
 -5 != False # => True
 
-# Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned
-# Don't mix up with bool(ints) and bitwise and/or (&,|)
+# 
+# bool(ints) 와 비트연산 and/or (&,|)을 섞어쓰지 마세요
 bool(0)     # => False
 bool(4)     # => True
 bool(-6)    # => True
 0 and 2     # => 0
 -5 or 0     # => -5
 
-# Equality is ==
+# 동일성 연산자는 ==입니다.
 1 == 1  # => True
 2 == 1  # => False
 
-# Inequality is !=
+# 불일치 연산자는 !=입니다.
 1 != 1  # => False
 2 != 1  # => True
 
-# More comparisons
+# 더 많은 비교 연산자들
 1 < 10  # => True
 1 > 10  # => False
 2 <= 2  # => True
 2 >= 2  # => True
 
-# Seeing whether a value is in a range
+# 그밖의 비교 연산자는 다음과 같습니다.
 1 < 2 and 2 < 3  # => True
 2 < 3 and 3 < 2  # => False
-# Chaining makes this look nicer
+# 비교 연산을 연결할 수도 있습니다!
 1 < 2 < 3  # => True
 2 < 3 < 2  # => False
 
@@ -123,33 +123,33 @@ b = [1, 2, 3, 4]  # Point b at a new list, [1, 2, 3, 4]
 b is a            # => False, a and b do not refer to the same object
 b == a            # => True, a's and b's objects are equal
 
-# Strings are created with " or '
+# 문자열은 "나 '로 생성합니다.
 "This is a string."
 'This is also a string.'
 
-# Strings can be added too! But try not to do this.
+# 문자열도 연결할 수 있습니다! 하지만 이걸 따라하진 마세요.
 "Hello " + "world!"  # => "Hello world!"
-# String literals (but not variables) can be concatenated without using '+'
+# String 리터럴 (변수가 아닌 경우에) 은 '+' 없이 연결 될 수 있습니다.
 "Hello " "world!"    # => "Hello world!"
 
-# A string can be treated like a list of characters
+# 문자열은 문자들의 리스트로 취급될수 있습니다.
 "This is a string"[0]  # => 'T'
 
-# You can find the length of a string
+# 문자의 길이를 알아낼수 있습니다.
 len("This is a string")  # => 16
 
-# You can also format using f-strings or formatted string literals (in Python 3.6+)
+# f-strings 이나 formatted string literals 으로 문자열 포맷팅을 할수 있습니다.(Python 3.6 이상에서)
 name = "Reiko"
 f"She said her name is {name}." # => "She said her name is Reiko"
 # You can basically put any Python statement inside the braces and it will be output in the string.
 f"{name} is {len(name)} characters long." # => "Reiko is 5 characters long."
 
 
-# None is an object
+# None은 객체입니다
 None  # => None
 
-# Don't use the equality "==" symbol to compare objects to None
-# Use "is" instead. This checks for equality of object identity.
+# 객체와 None을 비교할 때는 동일성 연산자인 `==`를 사용해서는 안 됩니다.
+# 대신 `is`를 사용하세요.
 "etc" is None  # => False
 None is None   # => True
 
@@ -165,7 +165,7 @@ bool(())  # => False
 ## 2. Variables and Collections
 ####################################################
 
-# Python has a print function
+# Python은 print 함수가 있습니다.
 print("I'm Python. Nice to meet you!")  # => I'm Python. Nice to meet you!
 
 # By default the print function also prints out a newline at the end.
@@ -176,33 +176,33 @@ print("Hello, World", end="!")  # => Hello, World!
 input_string_var = input("Enter some data: ") # Returns the data as a string
 # Note: In earlier versions of Python, input() method was named as raw_input()
 
-# There are no declarations, only assignments.
-# Convention is to use lower_case_with_underscores
+# 변수에 값을 할당하기 전에 변수를 반드시 선언하지 않아도 됩니다.
+# 명명관례는 '밑줄이_포함된_소문자'입니다.
 some_var = 5
 some_var  # => 5
 
-# Accessing a previously unassigned variable is an exception.
-# See Control Flow to learn more about exception handling.
-some_unknown_var  # Raises a NameError
+# 미할당된 변수에 접근하면 예외가 발생합니다.
+# 예외 처리에 관해서는 '제어 흐름'을 참고하세요.
+some_unknown_var  # NameError 발생
 
-# if can be used as an expression
+# 표현식으로도 사용할 수 있습니다.
 # Equivalent of C's '?:' ternary operator
 "yahoo!" if 3 > 2 else 2  # => "yahoo!"
 
-# Lists store sequences
+# 리스트는 순차 항목을 저장합니다.
 li = []
-# You can start with a prefilled list
+# 미리 채워진 리스트로 시작할 수도 있습니다.
 other_li = [4, 5, 6]
 
-# Add stuff to the end of a list with append
-li.append(1)    # li is now [1]
-li.append(2)    # li is now [1, 2]
-li.append(4)    # li is now [1, 2, 4]
-li.append(3)    # li is now [1, 2, 4, 3]
-# Remove from the end with pop
-li.pop()        # => 3 and li is now [1, 2, 4]
-# Let's put it back
-li.append(3)    # li is now [1, 2, 4, 3] again.
+# append를 이용해 리스트 끝에 항목을 추가합니다.
+li.append(1)    # li는 이제 [1]입니다.
+li.append(2)   # li는 이제 [1, 2]입니다.
+li.append(4)    # li는 이제 [1, 2, 4]입니다.
+li.append(3)    # li는 이제 [1, 2, 4, 3]입니다.
+# pop을 이용해 끝에서부터 항목을 제거합니다.
+li.pop()        #=> 3이 반환되고 li는 이제 [1, 2, 4]입니다.
+# 다시 넣어봅시다
+li.append(3)    # li는 이제 다시 [1, 2, 4, 3]가 됩니다.
 
 # Access a list like you would any array
 li[0]   # => 1
